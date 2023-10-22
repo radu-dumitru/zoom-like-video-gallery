@@ -19,19 +19,18 @@
 
         #container {
             border: 1px solid orange;
-            box-sizing: border-box;
-            width: 1500px;
-            height: 500px;
+            width: 1750px;
+            height: 650px;
 
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            max-width: calc(var(--width) * var(--cols));
+            max-width: calc(var(--w) * var(--h));
         }
 
         .video-container {
-            width: var(--width);
-            height: var(--height);
+            width: var(--w);
+            height: var(--h);
             background-color: #3a3a3e;
         }
 
@@ -43,23 +42,23 @@
 </head>
 <body>
     <div class="actions">
-        <input type="number" id="widthInput" value="1500" />
-        <input type="number" id="heightInput" value="500" />
+        <input type="number" id="widthInput" value="1750" />
+        <input type="number" id="heightInput" value="650" />
 
         <button onclick="calculateLayout()">Calculate Layout</button>
     </div>
 
     <div id="container">
         <div class="video-container">
-            <video autoplay loop src="videos/elon.webm"></video>
+            <video autoplay loop muted src="videos/elon.webm"></video>
         </div>
 
         <div class="video-container">
-            <video autoplay loop src="videos/mark.webm"></video>
+            <video autoplay loop muted src="videos/mark.webm"></video>
         </div>
 
         <div class="video-container">
-            <video autoplay loop src="videos/random.webm"></video>
+            <video autoplay loop muted src="videos/random.webm"></video>
         </div>
     </div>
 

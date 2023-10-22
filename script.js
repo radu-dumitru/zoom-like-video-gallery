@@ -31,8 +31,11 @@ function calculateLayout() {
     const containerHeight = parseInt(document.getElementById('heightInput').value);
 
     const container = document.getElementById('container');
-    container.setAttribute('style',`width:${containerWidth}px`);
-    container.setAttribute('style',`height:${containerHeight}px`);
+    container.style.width = `${containerWidth}px`;
+    container.style.height = `${containerHeight}px`;
+    
+    // container.setAttribute('style',`width:${containerWidth}px!important`);
+    // container.setAttribute('style',`height:${containerHeight}px!important`);
 
     console.log(containerWidth, containerHeight);
 
@@ -58,7 +61,7 @@ function calculateLayout() {
 
     console.log(result);
 
-    container.style.setProperty('--width', result.width + 'px');
-    container.style.setProperty('--height', result.height + 'px');
+    container.style.setProperty('--w', result.width + 'px');
+    container.style.setProperty('--h', result.height + 'px');
     container.style.setProperty('--cols', result.cols + '');
 }
