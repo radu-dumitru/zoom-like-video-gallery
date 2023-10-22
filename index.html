@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoom Like Gallery</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #1c1c1e;
+            height: 100vh;
+        }
+
+        .actions {
+            padding: 30px;
+        }
+
+        #container {
+            border: 1px solid orange;
+            box-sizing: border-box;
+            width: 1500px;
+            height: 500px;
+
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: calc(var(--width) * var(--cols));
+        }
+
+        .video-container {
+            width: var(--width);
+            height: var(--height);
+            background-color: #3a3a3e;
+        }
+
+        video {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="actions">
+        <input type="number" id="widthInput" value="1500" />
+        <input type="number" id="heightInput" value="500" />
+
+        <button onclick="calculateLayout()">Calculate Layout</button>
+    </div>
+
+    <div id="container">
+        <div class="video-container">
+            <video autoplay loop src="videos/elon.webm"></video>
+        </div>
+
+        <div class="video-container">
+            <video autoplay loop src="videos/mark.webm"></video>
+        </div>
+
+        <div class="video-container">
+            <video autoplay loop src="videos/random.webm"></video>
+        </div>
+    </div>
+
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
